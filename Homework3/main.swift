@@ -144,7 +144,7 @@ func subtractPoints(pointA: [String: Double]?, pointB: [String: Double]?) -> (Do
 
 // Testing
 print(addition(1,secondDigit: 1)!) // answer: 2
-//print(addition(1, secondDigit: nil)!) // answer: nil
+print(addition(nil, secondDigit: nil)) // answer: nil
 print(subtraction(1, secondDigit: 1)!) // answer: 0
 print(multiplication(1, secondDigit: 1)!) // answer: 1
 print(division(1, secondDigit: 1)!) // answer: 1
@@ -164,8 +164,12 @@ print(arrayOperations(arrayAvg, firstArray: [1,2,3])!) // answer: 2
 
 print(addPoints((1,1),pointB: (2,2))!) // answer: (3,3)
 print(subtractPoints((2,2), pointB: (1,1))!) // answer: (1,1)
+print(addPoints((1,1),pointB: (2,2))!)
 
-let pointA = ["z": 1.0, "y": 1.0]
+let pointA = ["x": 1.0, "y": 1.0]
 let pointB = ["x": 1.0, "y": 1.0]
 print(addPoints(pointA, pointB: pointB)!) // answer: (2.0, 2.0)
 print(subtractPoints(pointA, pointB: pointB)!) // answer: (0.0, 0.0)
+let pointC = ["z": 1.0, "y": 1.0]
+print(addPoints(pointA, pointB: pointC)) // answer: nil
+print(subtractPoints(pointA, pointB: pointC)) // answer: nil
