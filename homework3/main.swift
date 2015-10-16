@@ -5,8 +5,6 @@
 //  Created by Megan Hodge on 10/11/15.
 //  Copyright © 2015 Megan Hodge. All rights reserved.
 
-// Trying to put my code in a new project to see if it loads better in github
-
 import Foundation
 
 // adds the first number to the second and returns the total
@@ -46,15 +44,15 @@ func division(firstDigit: Int?, secondDigit: Int?) -> Int? {
     }
 }
 
-// takes in a math operation function and completes it using the two passed
+// takes in a math operation function and completes it using the two passed 
 // in numbers and returns the result
 func doubleOperation(operation : (Int?, Int?) -> Int?, firstDigit: Int?,
     secondDigit: Int?) -> Int? {
-        if firstDigit == nil || secondDigit == nil {
-            return nil
-        } else {
-            return operation(firstDigit!, secondDigit!)
-        }
+    if firstDigit == nil || secondDigit == nil {
+        return nil
+    } else {
+        return operation(firstDigit!, secondDigit!)
+    }
 }
 
 // takes an array of integers and adds them
@@ -106,8 +104,8 @@ func arrayOperations(operation : ([Int]?) -> Int?, firstArray: [Int]?) -> Int? {
 // adds the x and y coordinates of two points together to return a third point made up of their sums
 func addPoints(pointA: (x: Int?, y: Int?)?, pointB: (x: Int?, y: Int?)?) -> (Int, Int)? {
     if pointA != nil && pointB != nil && pointA!.x != nil && pointB!.x != nil
-        && pointA!.y != nil && pointB!.y != nil {
-            return (pointA!.x! + pointB!.x!, pointA!.y! + pointB!.y!)
+    && pointA!.y != nil && pointB!.y != nil {
+        return (pointA!.x! + pointB!.x!, pointA!.y! + pointB!.y!)
     } else {
         return nil
     }
